@@ -25,9 +25,18 @@ COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY --from=builder /app /var/www/html
 
-# Permisos
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && \
-    chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+# Asegura permisos CORRECTOS para storage (FIX PRINCIPAL)
+RUN mkdir -p /var/www/html/storage/logs /var/www/html/storage/framework/{cache,sessions,views} \
+    && touch /var/www/html/storage/logs/laravel.log \
+    && chown -R www-data:www-data /var/www/html/storage \
+    && chmod -R 775 /var/www/html/storage \
+    && chown -R www-data:www-data /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/bootstrap/cache
+
+# Configura usuario (AGREGADO)
+RUN apk add --no-cache shadow \
+    && usermod -u 1000 www-data \
+    && groupmod -g 1000 www-data
 
 # Configuración temporal para el build
 ENV CACHE_DRIVER=array \
