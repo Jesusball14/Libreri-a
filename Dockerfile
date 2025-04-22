@@ -49,12 +49,10 @@ ENV APP_ENV=production \
     SESSION_DRIVER=file \
     VIEW_COMPILED_PATH=/var/www/html/storage/framework/views
 
-# Comandos optimizados (EVITA PROBLEMAS DE CACHÉ)
-RUN php artisan config:clear \
-    && php artisan view:clear \
-    && php artisan cache:clear \
-    && php artisan view:cache \
-    && php artisan storage:link
+# Comandos artisan seguros
+RUN php artisan config:clear && \
+    php artisan view:clear && \
+    php artisan storage:link
 
 EXPOSE 8080
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
