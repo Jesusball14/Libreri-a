@@ -44,7 +44,7 @@ ENV CACHE_DRIVER=array \
     SESSION_DRIVER=array \
     QUEUE_CONNECTION=sync
 
-# Comandos artisan seguros (MODIFICADO)
+# Comandos artisan que NO requieren DB (MODIFICADO)
 RUN php artisan config:clear \
     && php artisan view:clear \
     && php artisan cache:clear \
