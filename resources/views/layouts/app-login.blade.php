@@ -9,7 +9,10 @@
 
     <link rel="icon" href="{{ asset('img/libros.png')}}">
 
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}"> <!--Bootstrap-->
+    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}"> <!--Bootstrap--> --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css')}}"> <!--Iconos-->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}"> <!--Estilos-->
 </head>
