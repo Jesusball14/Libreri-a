@@ -18,7 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- <link rel="stylesheet" href="{{ asset('css/app.css')}}"> <!--Estilos--> --}}
-    <link rel="stylesheet" href="https://github.com/Jesusball14/Libreri-a/blob/91463595bc2307ab0546d8b29f2d6221a5853a9b/public/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jesusball14/mi-css@latest/app.css">
 </head>
 <body>
     
