@@ -8,10 +8,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
-    // En tu controlador
-    dd(session()->all());
-
     public function index()
     {
 
