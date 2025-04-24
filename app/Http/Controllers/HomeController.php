@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
+    dd(auth()->check(), auth()->user(), auth()->user()->user_type); // Asegúrate de ver el rol
+
     public function index()
     {
 
