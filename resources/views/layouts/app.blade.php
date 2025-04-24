@@ -30,7 +30,7 @@
                     <button id="sidebarToggle" class="btn btn-dark">☰</button>
                 @endif
               <a class="navbar-brand" href="{{ route('home')}}">
-                <h4 class="ms-2">Librerí</h4>
+                <h4 class="ms-2">Librería</h4>
               </a>
 
               <a class="navbar-brand ms-4" aria-current="page" href="{{ route('books.index')}}">Buscar Libros</a>
