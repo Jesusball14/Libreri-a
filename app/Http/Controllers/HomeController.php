@@ -9,10 +9,12 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    dd(auth()->check(), auth()->user(), auth()->user()->role); // Asegúrate de ver el rol
+    
 
     public function index()
     {
+
+        dd(auth()->check(), auth()->user(), auth()->user()->role); // Asegúrate de ver el rol
 
         $products = Product::orderBy('id', 'desc')->paginate();
 
