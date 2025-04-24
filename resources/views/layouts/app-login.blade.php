@@ -42,7 +42,7 @@
     </header>
 
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}"></script>
 
 </body>

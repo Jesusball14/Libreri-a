@@ -12,7 +12,7 @@ class AuthController extends Controller
     //MOSTRAR FORMULARIO DE REGISTRO
     public function showRegisterForm()
     {
-        return view('auth.register');
+        return view('Auth.register');
     }
 
 
