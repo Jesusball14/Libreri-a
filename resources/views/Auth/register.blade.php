@@ -1,4 +1,4 @@
-@extends('Layouts.app-login')
+@extends('layouts.app-login')
 
 @section('title', 'Iniciar Sesión')
 
