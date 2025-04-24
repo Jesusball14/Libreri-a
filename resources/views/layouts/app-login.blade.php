@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <h4 class="ms-2">Librería</h4>
+                <h4 class="ms-2">Librerí</h4>
               </a>
 
             </div>
