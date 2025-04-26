@@ -35,7 +35,7 @@
                             <a href="#" class="btn">
                                 <h1 class="card-title">Categoría</h1>
                             </a>
-                        </center>
+                        </centr>
                     </div>
                 </div>
             </div>
