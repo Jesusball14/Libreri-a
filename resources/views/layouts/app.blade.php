@@ -20,15 +20,11 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/app.css')}}"> <!--Estilos--> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jesusball14/mi-css@latest/app.css">
 </head>
-<body>
-
-  <div style="background-image: url('{{ asset('img/fondo.png') }}');
-           background-size: cover;
-           background-position: center;
-           background-repeat: no-repeat;
-           height: 100vh;">
-   <!-- Tu contenido aquí -->
-    
+<body style="background-image: url('{{ asset('img/fondo.png') }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;">
     
     <header>
 
@@ -246,6 +242,6 @@
   
     
 
-  </div>
+
 </body>
 </html>
