@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jesusball14/mi-css@latest/app.css">
 </head>
 <body>
+
+  <div style="background-image: url('{{ asset('img/fondo.png') }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           height: 100vh;">
+   <!-- Tu contenido aquí -->
+    
     
     <header>
 
@@ -238,6 +246,6 @@
   
     
 
-
+  </div>
 </body>
 </html>
