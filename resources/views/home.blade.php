@@ -49,7 +49,7 @@
 
         <div class="row">
             @foreach($topProducts as $product)
-                <div class="col-6 col-md-3 col-sm-6 col-xm-6 mb-4 d-flex">
+                <div class="col-6 col-md-3 col-sm-6 col-xm-12 mb-4 d-flex">
                     <div class="card w-100">
                         @if($product->image)
                             <img src="{{ asset('storage/'.$product->image) }}" 
