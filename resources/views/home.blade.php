@@ -44,7 +44,7 @@
 
         <div id="content">
 
-            <h1><center>Libros más Vendidos</center></h1>
+            <h1><center>Libros más endidos</center></h1>
         </div>
 
         <div class="row">
