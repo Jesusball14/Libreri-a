@@ -4,6 +4,7 @@ use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use App\Middleware\CheckAuthenticated;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -14,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         // Registrar los middlewares con alias
         $middleware->alias([
-            'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class, // Usuario Administrador
+            'admin' => \App\Http\Middleware\CheckAuthenticated::class, // Usuario Administrador
             'account.owner' => \App\Http\Middleware\CheckAccountOwner::class, // Usuario Dueño
         ]);
     })
