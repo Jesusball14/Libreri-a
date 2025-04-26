@@ -23,7 +23,7 @@
 <body style="background-image: url('{{ asset('img/fondo.png') }}');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    
     height: 100vh;">
     
     <header>
