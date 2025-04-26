@@ -41,18 +41,10 @@
             </div>
         </div> --}}
 
-        <?php
-            register_shutdown_function(function () {
-                $error = error_get_last();
-                if ($error) {
-                    file_put_contents('shutdown.log', print_r($error, true));
-                }
-            });
-        ?>
 
         <div id="content">
 
-            <h1><center>Libros más endidos</center></h1>
+            <h1><center>Libros más Vendidos</center></h1>
         </div>
 
         <div class="row">
