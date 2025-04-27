@@ -15,7 +15,7 @@
         <table id="table" class="table mt-3 table-striped table-bordered table-responsive table-light"> 
             <thead>
                 <tr>
-                    <th>Imaen</th>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Descripción</th>
