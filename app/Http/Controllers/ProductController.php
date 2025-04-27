@@ -15,7 +15,7 @@ class ProductController extends Controller
     function index(){
         $products = Product::orderBy('id', 'desc')->paginate(); //orderBy('id', 'desc') ordena los productos por id de forma descendente
 
-        return view('products.index', compact('products'));
+        return view('Products.index', compact('products'));
     }
 
     function create(){
