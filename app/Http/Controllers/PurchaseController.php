@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class PurchaseController extends Controller
 {
     public function showPurchaseForm(Product $product){
-        return view('purchase.create', compact('product'));
+        return view('Purchase.create', compact('product'));
     }
 
     public function processPurchase(Request $request, Product $product){
@@ -32,6 +32,6 @@ class PurchaseController extends Controller
 
     public function userPurchases(){
         $purchases = Auth::user()->purchases()->with('product')->latest()->paginate(10);
-        return view('purchase.index', compact('purchases'));
+        return view('Purchase.index', compact('purchases'));
     }
 }
