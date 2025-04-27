@@ -15,7 +15,7 @@ class CategoryController extends Controller
     {
         $categories = Category::orderBy('id', 'desc')->paginate(5);
 
-        return view('categories.index', compact('categories'));
+        return view('Categories.index', compact('categories'));
     }
 
     /**
@@ -23,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        return view('Categories.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('categories.show', compact('category'));
+        return view('Categories.show', compact('category'));
     }
 
     /**
@@ -55,7 +55,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('categories.edit', compact('category'));
+        return view('Categories.edit', compact('category'));
     }
 
     /**

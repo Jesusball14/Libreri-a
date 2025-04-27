@@ -12,11 +12,11 @@ class AuthorController extends Controller
     function index(){
         $authors = Author::orderBy('id', 'desc')->paginate();
 
-        return view('admin.authors.index', compact('authors'));
+        return view('admin.Authors.index', compact('authors'));
     }
 
     function create(){
-        return view('admin.authors.create');
+        return view('admin.Authors.create');
     }
 
     function store(Request $request){
@@ -46,11 +46,11 @@ class AuthorController extends Controller
     }
 
     function show(Author $author){
-        return view('admin.authors.show', compact('author'));
+        return view('admin.Authors.show', compact('author'));
     }
 
     function edit(Author $author){
-        return view('admin.authors.edit', compact('author'));
+        return view('admin.Authors.edit', compact('author'));
     }
 
     function update(Request $request, Author $author){
