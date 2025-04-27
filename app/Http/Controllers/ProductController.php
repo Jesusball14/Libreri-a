@@ -22,7 +22,7 @@ class ProductController extends Controller
         $authors = Author::all();
         $categories = Category::all();
 
-        return view('products.create', compact('authors', 'categories'));
+        return view('Products.create', compact('authors', 'categories'));
     }
 
     function store(Request $request){
@@ -59,7 +59,7 @@ class ProductController extends Controller
     }
 
     function show(Product $product){
-        return view('products.show', compact('product'));
+        return view('Products.show', compact('product'));
     }
 
     function edit(Product $product){
@@ -67,7 +67,7 @@ class ProductController extends Controller
         $categories = Category::all();
 
         
-        return view('products.edit', compact('product', 'authors', 'categories'));
+        return view('Products.edit', compact('product', 'authors', 'categories'));
     }
 
     function update(Request $request, Product $product){
@@ -104,7 +104,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('products.show', $product)
+        return redirect()->route('Products.show', $product)
             ->with('success', 'Se ha actualizado con exito');
     }
 
@@ -137,7 +137,7 @@ class ProductController extends Controller
             $product->delete();
         
             // Redireccionar con mensaje de éxito
-            return redirect()->route('products.index')
+            return redirect()->route('Products.index')
                 ->with('success', 'Producto eliminado correctamente.');
             
         } catch (\Exception $e) {
