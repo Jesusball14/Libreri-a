@@ -104,7 +104,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('Products.show', $product)
+        return redirect()->route('products.show', $product)
             ->with('success', 'Se ha actualizado con exito');
     }
 
@@ -137,7 +137,7 @@ class ProductController extends Controller
             $product->delete();
         
             // Redireccionar con mensaje de éxito
-            return redirect()->route('Products.index')
+            return redirect()->route('products.index')
                 ->with('success', 'Producto eliminado correctamente.');
             
         } catch (\Exception $e) {
