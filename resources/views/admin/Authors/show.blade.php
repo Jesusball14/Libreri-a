@@ -6,7 +6,7 @@
 
     <div id="content">
         @if ($author->image)
-            <img src="{{ asset('storage/' . $author->image) }}" alt="{{ $author->title }}" width="100">
+            <img src="{{ $product->image_url }}">
         @else
             Sin imagen
         @endif

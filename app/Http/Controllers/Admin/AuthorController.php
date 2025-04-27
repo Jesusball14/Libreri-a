@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Author;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class AuthorController extends Controller
 {
@@ -27,15 +28,16 @@ class AuthorController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validar que sea una imagen
         ]);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('authors', 'public');
-        } else {
-            $imagePath = null;
-        }
+        // Subir la imagen a Cloudinary
+        $uploadedFile = Cloudinary::upload($request->file('image')->getRealPath(), [
+            'folder' => 'authors',
+        ]);
 
         $author = new Author;
 
-        $author->image= $imagePath;
+        $author->image_url = $uploadedFile->getSecurePath();
+        $author->image_public_id = $uploadedFile->getPublicId();
+        
         $author->name = $request->name;
         $author->lastname = $request->lastname;
         $author->description = $request->description;

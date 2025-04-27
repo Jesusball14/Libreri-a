@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
             $table->string('image')->nullable(); // Ajusta la posición según tu preferencia
+            $table->string('image_url')->nullable(); // Guardará la URL pública de Cloudinary
+            $table->string('image_public_id')->nullable(); // Identificador único en Cloudinary
             $table->string('name');
             $table->string('lastname');
             $table->text('description')->nullable();
