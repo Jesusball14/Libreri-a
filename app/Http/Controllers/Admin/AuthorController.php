@@ -21,6 +21,9 @@ class AuthorController extends Controller
     }
 
     function store(Request $request){
+
+        dd($request->all(), $request->hasFile('image'), $request->file('image'));
+
         $request->validate([
             'name' => 'required|string|max:121',
             'lastname' => 'required|string|max:121',
