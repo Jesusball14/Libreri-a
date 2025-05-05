@@ -81,7 +81,7 @@ return [
       'url' => env('CLOUDINARY_URL'),
       'secure' => (bool) env('CLOUDINARY_SECURE', true),
       'prefix' => env('CLOUDINARY_PREFIX'),
-  ],
+    ],
 
     'links' => [
         public_path('storage') => storage_path('app/public'),

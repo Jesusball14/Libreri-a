@@ -46,6 +46,19 @@ class AuthorController extends Controller
             'description' => $request->description,
         ]);
 
+        // Solo subir imagen si se proporciona
+        if ($request->hasFile('image')) {
+            $uploadedFile = $request->file('image');
+            $uploadResult = Cloudinary::upload($uploadedFile->getRealPath(), [
+                'folder' => 'autores',
+            ]);
+
+            $authorData['image_url'] = $uploadResult->getSecurePath();
+            $authorData['public_id'] = $uploadResult->getPublicId();
+        }
+
+        Author::create($authorData);
+
         return redirect('authors')->with('success', 'Se ha creado con éxito');
     }
 
