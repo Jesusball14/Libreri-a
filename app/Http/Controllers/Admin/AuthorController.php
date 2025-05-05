@@ -28,21 +28,23 @@ class AuthorController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validar que sea una imagen
         ]);
 
-        // Subir la imagen a Cloudinary
-        $uploadedFile = Cloudinary::upload($request->file('image')->getRealPath(), [
-            'folder' => 'authors',
+        // Subir la imagen
+        $uploadedFile = $request->file('image');
+        $uploadResult = Cloudinary::upload($uploadedFile->getRealPath(), [
+            'folder' => 'autores',
         ]);
 
-        $author = new Author;
-
-        $author->image_url = $uploadedFile->getSecurePath();
-        $author->image_public_id = $uploadedFile->getPublicId();
-        
-        $author->name = $request->name;
-        $author->lastname = $request->lastname;
-        $author->description = $request->description;
-
-        $author->save();
+        // Obtener URL pública
+        $imageUrl = $uploadResult->getSecurePath();
+    
+        // Guardar en tu base de datos
+        $author = Author::create([
+            'image_url' => $imageUrl,
+            'public_id' => $uploadResult->getPublicId(),
+            'name' => $request->name,
+            'lastname' => $request->lastname,
+            'description' => $request->description,
+        ]);
 
         return redirect('authors')->with('success', 'Se ha creado con éxito');
     }

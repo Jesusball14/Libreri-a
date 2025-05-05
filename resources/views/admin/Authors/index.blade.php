@@ -27,7 +27,7 @@
                 <tr>
                     <td>
                         @if ($author->image)
-                            <img src="{{ $product->image_url }}">
+                            <img src="{{ $product->image_url }}" alt="{{ $product->name }}">
                         @else
                             Sin imagen
                         @endif
