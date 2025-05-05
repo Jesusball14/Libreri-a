@@ -13,7 +13,7 @@
         @csrf <!--Directiva de Blade para proteger el formulario-->
 
         <div class="form-group">
-            <label for="image">Agrega una image del Autor</label>
+            <label for="image">Agrega una imagen del Autor</label>
             <input type="file" class="form-control" id="image" name="image" accept="image/*">
         </div>
 
