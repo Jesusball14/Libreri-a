@@ -29,7 +29,7 @@
                         @if ($author->image)
                             <img src="{{ $product->image_url }}" alt="{{ $product->name }}">
                         @else
-                            Sin imagen
+                            Sin Imagen
                         @endif
                     </td>
                     <td>{{ $author->name }}</td>
